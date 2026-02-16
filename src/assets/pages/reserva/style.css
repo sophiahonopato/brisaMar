@@ -1,0 +1,87 @@
+section {
+ width: 100%;
+ padding: 140px 0;
+ background:#f2efe9;
+ position: relative;
+ 
+}
+.reserva-wrap {
+ width: 85%;
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 120px;
+}
+/* TEXTO */
+.reserva-texto {
+ width: 50%;
+  text-align: center;
+}
+.titulo-reserva {
+   font-family: "Fjalla One", sans-serif;
+ margin-bottom: 20px;
+ font-size: 42px;
+
+}
+.texto-reserva {
+ font-family: "Manrope", sans-serif;
+ font-size: 17px;
+ line-height: 1.9;
+ color: #5e5e5e;
+ margin-bottom: 50px;
+ max-width: 520px;
+ 
+}
+/* BOTÃO EXTREMAMENTE ELEGANTE */
+.btn-reserva-page {
+ background: transparent;
+ border: 1px solid #1a1a1a;
+ padding: 16px 38px;
+ font-size: 13px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ font-family: "Manrope", sans-serif;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.6s cubic-bezier(.16,1,.3,1);
+
+}
+/* efeito premium interno */
+.btn-reserva-page::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background: #1a1a1a;
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.6s cubic-bezier(.16,1,.3,1);
+ z-index: -1;
+}
+.btn-reserva-page:hover::before {
+ transform: scaleX(1);
+}
+.btn-reserva-page:hover {
+ color: #ffffff;
+ letter-spacing: 4px;
+}
+/* IMAGEM */
+.reserva-imagem {
+ width: 50%;
+ overflow: hidden;
+ border-radius: 18px;
+ box-shadow: 0 40px 90px rgba(0,0,0,0.12);
+}
+.reserva-imagem img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 1.8s cubic-bezier(.16,1,.3,1);
+}
+.reserva-imagem:hover img {
+ transform: scale(1.05);
+}
+
+
+

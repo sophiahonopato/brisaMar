@@ -1,0 +1,130 @@
+/* IMPORT FONTES PREMIUM */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+.footer {
+ width: 100%;
+ background: #0c0c0c;
+ color: #eae6df;
+ padding: 80px 6vw 60px;
+ position: relative;
+}
+/* ========================= */
+/* LINHA SUPERIOR */
+/* ========================= */
+.superior-footer {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 40px;
+ margin-bottom: 60px;
+}
+.footer-line {
+ width: 120px;
+ opacity: 0.4;
+}
+.footer-logo {
+ width: 70px;
+ opacity: 0.95;
+}
+/* ========================= */
+/* GRID INFERIOR ORGANIZADO */
+/* ========================= */
+.footer-info {
+ display: grid;
+ grid-template-columns: 1.3fr 1fr 1fr;
+ gap: 80px;
+ align-items: flex-start;
+}
+/* ========================= */
+/* CTA */
+/* ========================= */
+.footer-cta {
+ font-family: "Montserrat", sans-serif;
+ font-size: 16px;
+ font-weight: 400;
+ letter-spacing: 0.5px;
+ margin-bottom: 24px;
+ color: #f5f2ea;
+ text-align: left;
+}
+/* ========================= */
+/* SOCIAL */
+/* ========================= */
+.footer-social {
+ display: flex;
+ gap: 18px;
+}
+.footer-social img {
+ width: 22px;
+ opacity: 0.7;
+ transition: all 0.4s ease;
+}
+.footer-social img:hover {
+ opacity: 1;
+ transform: translateY(-3px);
+}
+/* ========================= */
+/* SEÇÕES */
+/* ========================= */
+.footer-section {
+ text-align: left;
+}
+/* 🔥 TÍTULOS ALINHADOS */
+.footer-section h3 {
+ font-family: "Montserrat", sans-serif;
+ font-size: 15px;
+ font-weight: 600;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ margin-bottom: 24px;
+ color: #f5f2ea;
+ text-align: left;
+}
+/* TEXTOS */
+.footer-section p {
+ font-family: "Manrope", sans-serif;
+ font-size: 13px;
+ line-height: 1.9;
+ opacity: 0.7;
+ margin: 6px 0;
+ transition: opacity 0.3s ease;
+}
+.footer-section p:hover {
+ opacity: 1;
+}
+/* ========================= */
+/* LINHA INFERIOR SUTIL */
+/* ========================= */
+.footer::after {
+ content: "";
+ position: absolute;
+ bottom: 0;
+ left: 50%;
+ width: 80%;
+ height: 1px;
+ background: linear-gradient(
+   to right,
+   transparent,
+   rgba(255,255,255,0.2),
+   transparent
+ );
+ transform: translateX(-50%);
+}
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 900px) {
+ .footer-info {
+   grid-template-columns: 1fr;
+   gap: 50px;
+   text-align: center;
+ }
+ .footer-section,
+ .footer-cta {
+   text-align: center;
+ }
+ .footer-social {
+   justify-content: center;
+ }
+}

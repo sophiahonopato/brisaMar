@@ -1,0 +1,47 @@
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+ padding: 120px 0;
+}
+
+p{
+  color: #5e5e5e;
+}
+
+.linhaCinza {
+ width: 100%;
+ opacity: 0;
+ animation: fadeLine 1.4s ease forwards;
+ animation-delay: 0.3s;
+}
+a {
+ text-decoration: none;
+ color: inherit;
+}
+a:hover {
+ opacity: 0.7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ font-family: 'Manrope', sans-serif;
+ background-color: #f6f5f2; /* fundo sofisticado */
+ color: #1a1a1a;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
