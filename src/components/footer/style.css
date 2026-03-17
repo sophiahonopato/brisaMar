@@ -2,129 +2,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 .footer {
- width: 100%;
- background: #0c0c0c;
- color: #eae6df;
- padding: 80px 6vw 60px;
- position: relative;
+  width: 100%;
+  background: #0c0c0c;
+  color: #eae6df;
+  padding: 80px 20px 60px;
+  position: relative;
 }
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* ========================= */
 /* LINHA SUPERIOR */
 /* ========================= */
 .superior-footer {
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 40px;
- margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
 }
+
 .footer-line {
- width: 120px;
- opacity: 0.4;
+  width: 120px;
+  max-width: 100%;
+  opacity: 0.4;
 }
+
 .footer-logo {
- width: 70px;
- opacity: 0.95;
+  width: 70px;
+  max-width: 100%;
+  opacity: 0.95;
 }
+
 /* ========================= */
 /* GRID INFERIOR ORGANIZADO */
 /* ========================= */
 .footer-info {
- display: grid;
- grid-template-columns: 1.3fr 1fr 1fr;
- gap: 80px;
- align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
 }
+
 /* ========================= */
 /* CTA */
 /* ========================= */
 .footer-cta {
- font-family: "Montserrat", sans-serif;
- font-size: 16px;
- font-weight: 400;
- letter-spacing: 0.5px;
- margin-bottom: 24px;
- color: #f5f2ea;
- text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  color: #f5f2ea;
+  text-align: left;
 }
+
 /* ========================= */
 /* SOCIAL */
 /* ========================= */
 .footer-social {
- display: flex;
- gap: 18px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
+
 .footer-social img {
- width: 22px;
- opacity: 0.7;
- transition: all 0.4s ease;
+  width: 22px;
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
+
 .footer-social img:hover {
- opacity: 1;
- transform: translateY(-3px);
+  opacity: 1;
+  transform: translateY(-3px);
 }
+
 /* ========================= */
 /* SEÇÕES */
 /* ========================= */
 .footer-section {
- text-align: left;
+  text-align: left;
+  min-width: 0;
 }
-/* 🔥 TÍTULOS ALINHADOS */
+
+/* TÍTULOS */
 .footer-section h3 {
- font-family: "Montserrat", sans-serif;
- font-size: 15px;
- font-weight: 600;
- letter-spacing: 2px;
- text-transform: uppercase;
- margin-bottom: 24px;
- color: #f5f2ea;
- text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #f5f2ea;
+  text-align: left;
 }
+
 /* TEXTOS */
 .footer-section p {
- font-family: "Manrope", sans-serif;
- font-size: 13px;
- line-height: 1.9;
- opacity: 0.7;
- margin: 6px 0;
- transition: opacity 0.3s ease;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.7;
+  margin: 6px 0;
+  transition: opacity 0.3s ease;
 }
+
 .footer-section p:hover {
- opacity: 1;
+  opacity: 1;
 }
+
 /* ========================= */
 /* LINHA INFERIOR SUTIL */
 /* ========================= */
 .footer::after {
- content: "";
- position: absolute;
- bottom: 0;
- left: 50%;
- width: 80%;
- height: 1px;
- background: linear-gradient(
-   to right,
-   transparent,
-   rgba(255,255,255,0.2),
-   transparent
- );
- transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+  transform: translateX(-50%);
 }
+
 /* ========================= */
-/* RESPONSIVO */
+/* TABLET */
 /* ========================= */
 @media (max-width: 900px) {
- .footer-info {
-   grid-template-columns: 1fr;
-   gap: 50px;
-   text-align: center;
- }
- .footer-section,
- .footer-cta {
-   text-align: center;
- }
- .footer-social {
-   justify-content: center;
- }
+  .footer {
+    padding: 70px 16px 50px;
+  }
+
+  .superior-footer {
+    gap: 24px;
+    margin-bottom: 44px;
+  }
+
+  .footer-line {
+    width: 90px;
+  }
+
+  .footer-logo {
+    width: 60px;
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-section,
+  .footer-cta,
+  .footer-section h3 {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+@media (max-width: 600px) {
+  .footer {
+    padding: 56px 14px 42px;
+  }
+
+  .superior-footer {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .footer-line {
+    width: 55px;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+
+  .footer-info {
+    gap: 32px;
+  }
+
+  .footer-cta {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .footer-section h3 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+
+  .footer-section p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .footer-social {
+    gap: 14px;
+  }
+
+  .footer-social img {
+    width: 20px;
+  }
+
+  .footer::after {
+    width: 90%;
+  }
 }

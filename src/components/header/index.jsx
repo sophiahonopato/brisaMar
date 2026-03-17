@@ -14,11 +14,12 @@ export default function Header() {
     return (
         <header className={`header ${scrolled ? "header--scrolled" : ""}`}>
             <div className="header__inner">
-                <a href="#restaurante" className="header__link">O RESTAURANTE</a>
-                <a href="#equipe" className="header__link">NOSSA EQUIPE</a>
-                <a href="/" className="header__logoLink">
+                 <a href="/" className="header__logoLink">
                     <img src={Logo} alt="Mar & Brisa" className="header__logo" />
                 </a>
+                <a href="#restaurante" className="header__link">O RESTAURANTE</a>
+                <a href="#equipe" className="header__link">NOSSA EQUIPE</a>
+               
                 <Link to="/reserva" className="header__cta">Reservas</Link>
             </div>
         </header>

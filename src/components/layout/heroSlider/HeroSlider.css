@@ -1,14 +1,16 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* swiper ocupa tudo */
 .hero__swiper {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 78px);
+  min-height: 520px;
 }
 
 .hero__slide {
@@ -25,18 +27,20 @@
   transform: scale(1.08);
   animation: heroZoom 8s ease-in-out infinite alternate;
   filter: saturate(0.95) contrast(1.05);
+  
 }
 
-/* overlay chique (sem “cinza lavado”) */
+/* overlay chique */
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(60% 60% at 50% 35%, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%),
     linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.05) 100%);
+    
 }
 
-/* grão super leve (opcional, mas fica lindo) */
+/* grão */
 .hero__grain {
   position: absolute;
   inset: 0;
@@ -49,13 +53,16 @@
 .hero__content {
   position: absolute;
   inset: 0;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 10;
   color: #f5f2ea;
+  padding: 0 20px;
+
+
 }
 
 .hero__kicker {
@@ -63,49 +70,29 @@
   font-size: 12px;
   opacity: 0.85;
   margin-bottom: 10px;
-}
-
-/* Hero principal */
-h1 {
- font-family: 'Playfair Display', serif;
- font-size: 72px;
- font-weight: 600;
- letter-spacing: -1px;
-}
-/* Títulos de seção */
-h2 {
- font-family: 'Playfair Display', serif;
- font-size: 42px;
- font-weight: 500;
- letter-spacing: 1px;
-}
-/* Subtítulos */
-h3 {
- font-family: 'Playfair Display', serif;
- font-size: 22px;
- font-weight: 500;
-}
-/* Texto padrão */
-p {
- font-family: 'Manrope', sans-serif;
- font-size: 16px;
- font-weight: 300;
- line-height: 1.9;
- letter-spacing: 0.3px;
+  text-transform: uppercase;
+  
 }
 
 .hero__title {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(34px, 4vw, 64px);
+  font-weight: 600;
+  letter-spacing: -1px;
   line-height: 1.05;
   margin: 0;
+  max-width: 900px;
 }
 
 .hero__subtitle {
+  font-family: 'Manrope', sans-serif;
   max-width: 680px;
   margin: 16px 0 28px;
   font-size: clamp(14px, 1.2vw, 18px);
-  opacity: 0.88;
+  font-weight: 300;
   line-height: 1.7;
+  letter-spacing: 0.3px;
+  opacity: 0.88;
 }
 
 .hero__actions {
@@ -122,10 +109,12 @@ p {
   padding: 12px 18px;
   border-radius: 999px;
   text-decoration: none;
+  font-family: 'Manrope', sans-serif;
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
 }
 
 .hero__btn--primary {
@@ -176,6 +165,13 @@ p {
   animation: scrollDot 1.4s ease-in-out infinite;
 }
 
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 @keyframes heroZoom {
   from { transform: scale(1.08); }
   to   { transform: scale(1.14); }
@@ -187,12 +183,125 @@ p {
   100% { transform: translate(-50%, 0); opacity: 1; }
 }
 
-.hero{
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+/* NOTEBOOK */
+@media (max-width: 1100px) {
+  .hero__swiper {
+    min-height: 500px;
+  }
+
+  .hero__content {
+    padding: 0 24px;
+  }
+
+  .hero__title {
+    max-width: 760px;
+  }
+
+  .hero__subtitle {
+    max-width: 600px;
+  }
 }
 
-.hero {
-  padding-top: 78px; /* altura do header */
+/* TABLET */
+@media (max-width: 900px) {
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero__swiper {
+    height: calc(100vh - 72px);
+    min-height: 460px;
+  }
+
+  .hero__content {
+    padding: 0 18px;
+  }
+
+  .hero__kicker {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+
+  .hero__title {
+    font-size: clamp(30px, 6vw, 48px);
+    max-width: 620px;
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+    margin: 14px 0 24px;
+    max-width: 520px;
+  }
+
+  .hero__btn {
+    padding: 11px 16px;
+    font-size: 11px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 68px;
+    min-height: 100svh;
+  }
+
+  .hero__swiper {
+    height: calc(100svh - 68px);
+    min-height: 420px;
+  }
+
+  .hero__content {
+    padding: 0 14px;
+  }
+
+  .hero__kicker {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    margin-bottom: 8px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0 20px;
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero__btn {
+    padding: 10px 14px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .hero__scroll {
+    bottom: 16px;
+  }
+}
+
+/* CELULAR MUITO PEQUENO */
+@media (max-width: 420px) {
+  .hero__title {
+    font-size: 24px;
+  }
+
+  .hero__subtitle {
+    font-size: 13px;
+  }
+
+  .hero__btn {
+    width: 100%;
+    max-width: 260px;
+  }
 }

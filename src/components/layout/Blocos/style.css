@@ -1,118 +1,169 @@
-.section-blocos{
- display: flex;
- justify-content: center;
- padding: 60px 0;
+.section-blocos {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
 }
 /* 2 colunas: grande + 3 pequenos */
-.container-blocos{
- width: min(800px, 62vw);
- display: grid;
- grid-template-columns: 1.9fr 1fr; /* grande bem maior */
- gap: 26px;
- align-items: stretch;
+.container-blocos {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 26px;
+  align-items: stretch;
 }
 /* BLOCO MAIOR */
-.Maior{
- position: relative;
- border-radius: 14px;
- overflow: hidden;
- min-height: 520px;       /* garante presença */
- height: 100%;
+.Maior {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 520px;
+  height: 100%;
 }
-.blocoMaior{
- width: 100%;
- height: 100%;
- object-fit: cover;
- display: block;
- transform: scale(1.01);
- transition: transform 1.4s cubic-bezier(.16,1,.3,1);
+
+.blocoMaior {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 1.4s cubic-bezier(.16, 1, .3, 1);
 }
-.Maior:hover .blocoMaior{
- transform: scale(1.06);
+
+.Maior:hover .blocoMaior {
+  transform: scale(1.06);
 }
+
 /* 3 PEQUENOS com mesma proporção */
-.blocos-menores{
- display: flex;
- flex-direction: column;
- gap: 18px;
- height: 100%;
- min-height: 520px;  /* iguala com o grande */
+.blocos-menores {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+  min-height: 520px;
 }
-.blocos-menores img{
- flex: 1;                 /* <- faz os 3 terem o MESMO tamanho */
- width: 100%;
- height: 100%;
- object-fit: cover;
- border-radius: 14px;
- display: block;
- transform: scale(1.01);
- transition: transform 1.4s cubic-bezier(.16,1,.3,1);
+
+.blocos-menores img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 1.4s cubic-bezier(.16, 1, .3, 1);
 }
-.blocos-menores img:hover{
- transform: scale(1.06);
+
+.blocos-menores img:hover {
+  transform: scale(1.06);
 }
+
 /* BOTÃO no centro embaixo, por cima do bloco maior */
-.btn-reserva{
- position: absolute;
- left: 50%;
- bottom: 28px; /* bem embaixo */
- transform: translateX(-50%);
- z-index: 5;
- padding: 14px 38px;
- border-radius: 999px;
- border: 1px solid rgba(255,255,255,0.55);
- color: #fff;
- text-decoration: none;
- font-size: 13px;
- font-weight: 300;
- letter-spacing: 3px;
- text-transform: uppercase;
- background: rgba(255,255,255,0.06);
- backdrop-filter: blur(10px);
- -webkit-backdrop-filter: blur(10px);
- transition: all 0.6s cubic-bezier(.16,1,.3,1);
- overflow: hidden;
+.btn-reserva {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 14px 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.6s cubic-bezier(.16,1,.3,1);
+  overflow: hidden;
+  white-space: nowrap;
 }
-.btn-reserva::before{
- content: "";
- position: absolute;
- left: -120%;
- top: 0;
- width: 120%;
- height: 100%;
- background: linear-gradient(
-   120deg,
-   transparent,
-   rgba(255,255,255,0.45),
-   transparent
- );
- transition: 0.9s cubic-bezier(.16,1,.3,1);
+
+.btn-reserva::before {
+  content: "";
+  position: absolute;
+  left: -120%;
+  top: 0;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.45),
+    transparent
+  );
+  transition: 0.9s cubic-bezier(.16,1,.3,1);
 }
-.btn-reserva:hover{
- background: rgba(255,255,255,0.95);
- color: #0b0b0b;
- border-color: rgba(255,255,255,0.95);
- transform: translateX(-50%) translateY(-2px);
+
+.btn-reserva:hover {
+  background: rgba(255,255,255,0.95);
+  color: #0b0b0b;
+  border-color: rgba(255,255,255,0.95);
+  transform: translateX(-50%) translateY(-2px);
 }
-.btn-reserva:hover::before{
- left: 120%;
+
+.btn-reserva:hover::before {
+  left: 120%;
 }
-/* Responsivo (mobile) */
-@media (max-width: 900px){
- .container-blocos{
-   grid-template-columns: 1fr;
- }
- .Maior, .blocos-menores{
-   min-height: auto;
- }
- .Maior{
-   min-height: 420px;
- }
- .blocos-menores{
-   height: auto;
- }
- .blocos-menores img{
-   height: 220px;
-   flex: initial;
- }
+
+/* tablet */
+@media (max-width: 900px) {
+  .section-blocos {
+    padding: 50px 16px;
+  }
+
+  .container-blocos {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .Maior,
+  .blocos-menores {
+    min-height: auto;
+  }
+
+  .Maior {
+    min-height: 420px;
+  }
+
+  .blocos-menores {
+    height: auto;
+  }
+
+  .blocos-menores img {
+    height: 220px;
+    flex: initial;
+  }
+}
+
+/* celular */
+@media (max-width: 600px) {
+  .section-blocos {
+    padding: 40px 12px;
+  }
+
+  .Maior {
+    min-height: 320px;
+    border-radius: 12px;
+  }
+
+  .blocos-menores {
+    gap: 12px;
+  }
+
+  .blocos-menores img {
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .btn-reserva {
+    bottom: 18px;
+    padding: 12px 22px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    max-width: 85%;
+  }
 }

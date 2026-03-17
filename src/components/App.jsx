@@ -5,6 +5,7 @@ import BlobCursor from "./component/BlobCursor"
 import Home from "../assets/pages/home";
 import Reserva from "../assets/pages/reserva";
 import ScrollToTop from "../components/scrolltoTop/scrollToTop"
+import Erro from "../assets/pages/404"
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reserva" element={<Reserva />} />
+          <Route path="*" element={<Erro/>} />
         </Routes>
 
         <Footer />

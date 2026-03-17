@@ -1,0 +1,55 @@
+.container-404{
+    height: 100vh;
+    width: 100%;
+    background: #0c0c0c;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    gap: 20px;
+}
+
+/* número 404 gigante */
+.container-404 h2{
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 0;
+
+    background: linear-gradient(90deg,#ffffff,#9c9c9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* texto */
+.container-404 p{
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* botão voltar */
+.container-404 a{
+    margin-top: 20px;
+    padding: 12px 28px;
+
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: all 0.4s ease;
+}
+
+.container-404 a:hover{
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
